@@ -1,0 +1,10 @@
+[
+  {
+    "productId": "P001",
+    "last7DaysSales": [1, 2, 1, 0, 2, 1, 1]
+  },
+  {
+    "productId": "P002",
+    "last7DaysSales": [0, 1, 0, 1, 1, 0, 2]
+  }
+]

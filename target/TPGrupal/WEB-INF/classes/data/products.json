@@ -1,0 +1,26 @@
+[
+  {
+    "productId": "P001",
+    "productName": "Dell XPS 13 Laptop",
+    "sku": "DELL-XPS13",
+    "unitOfMeasure": "Unit",
+    "cost": 1200,
+    "salePrice": 1500,
+    "category": "Electronics",
+    "location": "A1-01",
+    "active": true,
+    "stock": 8
+  },
+  {
+    "productId": "P002",
+    "productName": "LG UltraWide Monitor",
+    "sku": "LG-UW34",
+    "unitOfMeasure": "Unit",
+    "cost": 350,
+    "salePrice": 450,
+    "category": "Electronics",
+    "location": "A1-02",
+    "active": true,
+    "stock": 5
+  }
+]

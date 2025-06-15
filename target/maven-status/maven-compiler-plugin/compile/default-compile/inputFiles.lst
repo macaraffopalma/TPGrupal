@@ -1,0 +1,17 @@
+C:\Users\Usuario\Downloads\TPGrupal\src\main\java\ar\edu\udecy\web\inventory\action\AddProductAction.java
+C:\Users\Usuario\Downloads\TPGrupal\src\main\java\ar\edu\udecy\web\inventory\action\CurrentStockListAction.java
+C:\Users\Usuario\Downloads\TPGrupal\src\main\java\ar\edu\udecy\web\inventory\action\InventoryMovementListAction.java
+C:\Users\Usuario\Downloads\TPGrupal\src\main\java\ar\edu\udecy\web\inventory\action\LoginAction.java
+C:\Users\Usuario\Downloads\TPGrupal\src\main\java\ar\edu\udecy\web\inventory\action\PredictorStockListAction.java
+C:\Users\Usuario\Downloads\TPGrupal\src\main\java\ar\edu\udecy\web\inventory\action\ProductForm.java
+C:\Users\Usuario\Downloads\TPGrupal\src\main\java\ar\edu\udecy\web\inventory\action\ProductListAction.java
+C:\Users\Usuario\Downloads\TPGrupal\src\main\java\ar\edu\udecy\web\inventory\dao\CurrentStockDAO.java
+C:\Users\Usuario\Downloads\TPGrupal\src\main\java\ar\edu\udecy\web\inventory\dao\InventoryMovementDAO.java
+C:\Users\Usuario\Downloads\TPGrupal\src\main\java\ar\edu\udecy\web\inventory\dao\PredictorStockDAO.java
+C:\Users\Usuario\Downloads\TPGrupal\src\main\java\ar\edu\udecy\web\inventory\dao\ProductDAO.java
+C:\Users\Usuario\Downloads\TPGrupal\src\main\java\ar\edu\udecy\web\inventory\model\CurrentStock.java
+C:\Users\Usuario\Downloads\TPGrupal\src\main\java\ar\edu\udecy\web\inventory\model\InventoryMovement.java
+C:\Users\Usuario\Downloads\TPGrupal\src\main\java\ar\edu\udecy\web\inventory\model\PredictorStock.java
+C:\Users\Usuario\Downloads\TPGrupal\src\main\java\ar\edu\udecy\web\inventory\model\Product.java
+C:\Users\Usuario\Downloads\TPGrupal\src\main\java\ar\edu\udecy\web\inventory\util\JsonDB.java
+C:\Users\Usuario\Downloads\TPGrupal\src\main\java\ar\edu\udecy\web\inventory\util\LoginValidator.java

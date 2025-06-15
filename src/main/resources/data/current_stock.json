@@ -1,0 +1,14 @@
+[
+  {
+    "productId": "P001",
+    "quantity": 8,
+    "lastUpdated": "2025-06-14T00:00:00",
+    "totalInventoryCost": 9600
+  },
+  {
+    "productId": "P002",
+    "quantity": 5,
+    "lastUpdated": "2025-06-14T00:00:00",
+    "totalInventoryCost": 1750
+  }
+]

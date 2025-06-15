@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+    <!-- Formularios -->
+    <form-beans>
+        <form-bean name="productForm" type="ar.edu.udecy.web.inventory.action.ProductForm"/>
+    </form-beans>
+
+    <!-- Mapeo de acciones -->
+    <action-mappings>
+        <action path="/productList"
+                type="ar.edu.udecy.web.inventory.action.ProductListAction"
+                scope="request"
+                validate="false">
+            <forward name="success" path="/productList.jsp"/>
+        </action>
+
+        <action path="/addProduct"
+                type="ar.edu.udecy.web.inventory.action.AddProductAction"
+                name="productForm"
+                scope="request"
+                input="/addProduct.jsp"
+                validate="true">
+            <forward name="success" path="/productList.do"/>
+        </action>
+
+        <action path="/currentStockList"
+                type="ar.edu.udecy.web.inventory.action.CurrentStockListAction"
+                scope="request"
+                validate="false">
+            <forward name="success" path="/currentStockList.jsp"/>
+        </action>
+
+        <action path="/inventoryMovements"
+                type="ar.edu.udecy.web.inventory.action.InventoryMovementListAction"
+                scope="request"
+                validate="false">
+            <forward name="success" path="/inventoryMovementList.jsp"/>
+        </action>
+
+        <action path="/predictorStockList"
+                type="ar.edu.udecy.web.inventory.action.PredictorStockListAction"
+                scope="request"
+                validate="false">
+            <forward name="success" path="/predictorStockList.jsp"/>
+        </action>
+    </action-mappings>
+</struts-config>
