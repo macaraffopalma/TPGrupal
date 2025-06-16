@@ -20,44 +20,44 @@ public class AddProductAction extends Action {
 
         ProductForm productForm = (ProductForm) form;
 
-        // Crear y guardar producto
-        Product product = new Product(
-                productForm.getProductId(),
-                productForm.getProductName(),
-                productForm.getSku(),
-                productForm.getUnitOfMeasure(),
-                productForm.getCost(),
-                productForm.getSalePrice(),
-                productForm.getCategory(),
-                productForm.getLocation(),
-                productForm.isActive(),
-                productForm.getStock()
-        );
+        // Crear nuevo producto
+        Product producto = new Product();
+        producto.setProductId(productForm.getProductId());
+        producto.setProductName(productForm.getProductName());
+        producto.setSku(productForm.getSku());
+        producto.setUnitOfMeasure(productForm.getUnitOfMeasure());
+        producto.setCost(productForm.getCost());
+        producto.setSalePrice(productForm.getSalePrice());
+        producto.setCategory(productForm.getCategory());
+        producto.setLocation(productForm.getLocation());
+        producto.setActive(productForm.isActive());
+        producto.setStock(productForm.getStock());
 
-        ProductDAO dao = new ProductDAO();
-        dao.addProduct(product);
+        // Guardar en JSON productos
+        ProductDAO productDAO = new ProductDAO();
+        productDAO.addProduct(producto);
 
-        // Crear y guardar stock
-        String fechaHoy = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+        // Crear y guardar stock inicial
         CurrentStock stock = new CurrentStock(
-                product.getProductId(),
-                product.getStock(),
-                fechaHoy,
-                product.getCost() * product.getStock()
+                producto.getProductId(),
+                producto.getStock(),
+                producto.getLocation(),
+                producto.getCost()
         );
         CurrentStockDAO stockDAO = new CurrentStockDAO();
         stockDAO.addCurrentStock(stock);
 
-        // Crear y guardar movimiento
-        InventoryMovement movement = new InventoryMovement(
-                product.getProductId(),
-                "Ingreso",
+        // Crear y guardar movimiento de inventario inicial
+        String fechaHoy = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+        InventoryMovement movimiento = new InventoryMovement(
+                producto.getProductId(),
+                "INGRESO",
                 fechaHoy,
-                product.getStock(),
-                "Alta inicial"
+                producto.getStock(),
+                "Alta de producto"
         );
         InventoryMovementDAO movementDAO = new InventoryMovementDAO();
-        movementDAO.addInventoryMovement(movement);
+        movementDAO.addInventoryMovement(movimiento);
 
         return mapping.findForward("success");
     }

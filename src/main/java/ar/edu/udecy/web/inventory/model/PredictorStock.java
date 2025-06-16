@@ -1,24 +1,31 @@
 package ar.edu.udecy.web.inventory.model;
 
+import java.util.List;
+
 public class PredictorStock {
     private String productId;
-    private String date;
-    private int soldUnits;
+    private List<Integer> last7DaysSales;
 
     public PredictorStock() {}
 
-    public PredictorStock(String productId, String date, int soldUnits) {
+    public PredictorStock(String productId, List<Integer> last7DaysSales) {
         this.productId = productId;
-        this.date = date;
-        this.soldUnits = soldUnits;
+        this.last7DaysSales = last7DaysSales;
     }
 
-    public String getProductId() { return productId; }
-    public void setProductId(String productId) { this.productId = productId; }
+    public String getProductId() {
+        return productId;
+    }
 
-    public String getDate() { return date; }
-    public void setDate(String date) { this.date = date; }
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
 
-    public int getSoldUnits() { return soldUnits; }
-    public void setSoldUnits(int soldUnits) { this.soldUnits = soldUnits; }
+    public List<Integer> getLast7DaysSales() {
+        return last7DaysSales;
+    }
+
+    public void setLast7DaysSales(List<Integer> last7DaysSales) {
+        this.last7DaysSales = last7DaysSales;
+    }
 }

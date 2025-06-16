@@ -11,10 +11,10 @@
     <p>No hay movimientos registrados.</p>
 </c:if>
 
-<c:if test="${not empty inventoryMovements}">
+<c:if test="${not empty inventoryMovementList}">
     <table border="1">
         <tr><th>ID</th><th>Tipo</th><th>Cantidad</th><th>Fecha</th></tr>
-        <c:forEach var="m" items="${inventoryMovements}">
+        <c:forEach var="m" items="${inventoryMovementList}">
             <tr>
                 <td>${m.productId}</td>
                 <td>${m.type}</td>
