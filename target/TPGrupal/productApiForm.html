@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Alta de Producto via API</title>
+</head>
+<body>
+<h2>Alta de Producto vía API REST</h2>
+<form id="productForm">
+    <input type="text" name="productId" placeholder="ID" required><br>
+    <input type="text" name="productName" placeholder="Nombre" required><br>
+    <input type="text" name="sku" placeholder="SKU" required><br>
+    <input type="text" name="unitOfMeasure" placeholder="Unidad de medida"><br>
+    <input type="number" name="cost" step="0.01" placeholder="Costo"><br>
+    <input type="number" name="salePrice" step="0.01" placeholder="Precio venta"><br>
+    <input type="text" name="category" placeholder="Categoría"><br>
+    <input type="text" name="location" placeholder="Ubicación"><br>
+    <input type="number" name="stock" placeholder="Stock"><br>
+    <label>Activo: <input type="checkbox" name="active"></label><br>
+    <button type="submit">Agregar Producto</button>
+</form>
+
+<pre id="response"></pre>
+
+<script>
+    document.getElementById("productForm").addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const form = e.target;
+        const data = {
+            productId: form.productId.value,
+            productName: form.productName.value,
+            sku: form.sku.value,
+            unitOfMeasure: form.unitOfMeasure.value,
+            cost: parseFloat(form.cost.value),
+            salePrice: parseFloat(form.salePrice.value),
+            category: form.category.value,
+            location: form.location.value,
+            stock: parseInt(form.stock.value),
+            active: form.active.checked
+        };
+
+        const res = await fetch("/TPGrupal/api/products", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        });
+
+        const result = await res.text();
+        document.getElementById("response").innerText = result;
+    });
+</script>
+</body>
+</html>

@@ -24,6 +24,16 @@
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ProductApiServlet</servlet-name>
+        <servlet-class>ar.edu.udecy.web.inventory.api.ProductApiServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProductApiServlet</servlet-name>
+        <url-pattern>/api/products</url-pattern>
+    </servlet-mapping>
+
     <!-- Página por defecto -->
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>

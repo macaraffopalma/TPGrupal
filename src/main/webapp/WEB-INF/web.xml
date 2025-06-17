@@ -24,8 +24,8 @@
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
 
-    <!-- Página por defecto -->
+       <!-- Página por defecto -->
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

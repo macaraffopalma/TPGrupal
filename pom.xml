@@ -76,12 +76,6 @@
             <version>2.10.1</version>
         </dependency>
 
-        <!-- Opcional: SQLite (si lo usás en otro momento) -->
-        <dependency>
-            <groupId>org.xerial</groupId>
-            <artifactId>sqlite-jdbc</artifactId>
-            <version>3.50.1.0</version>
-        </dependency>
     </dependencies>
 
     <build>

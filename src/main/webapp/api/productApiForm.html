@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Alta de Producto vía API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            padding: 30px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        input, label, button {
+            display: block;
+            margin-bottom: 12px;
+            width: 100%;
+        }
+
+        input {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            margin-top: 20px;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Alta de Producto vía API REST</h2>
+<form id="productForm">
+    <input type="text" name="productId" placeholder="ID" required>
+    <input type="text" name="productName" placeholder="Nombre" required>
+    <input type="text" name="sku" placeholder="SKU" required>
+    <input type="text" name="unitOfMeasure" placeholder="Unidad de medida">
+    <input type="number" name="cost" step="0.01" placeholder="Costo">
+    <input type="number" name="salePrice" step="0.01" placeholder="Precio venta">
+    <input type="text" name="category" placeholder="Categoría">
+    <input type="text" name="location" placeholder="Ubicación">
+    <input type="number" name="stock" placeholder="Stock">
+    <label>Activo: <input type="checkbox" name="active"></label>
+    <button type="submit">Agregar Producto</button>
+</form>
+
+<pre id="response"></pre>
+
+<script>
+    document.getElementById("productForm").addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const form = e.target;
+        const data = {
+            productId: form.productId.value,
+            productName: form.productName.value,
+            sku: form.sku.value,
+            unitOfMeasure: form.unitOfMeasure.value,
+            cost: parseFloat(form.cost.value),
+            salePrice: parseFloat(form.salePrice.value),
+            category: form.category.value,
+            location: form.location.value,
+            stock: parseInt(form.stock.value),
+            active: form.active.checked
+        };
+
+        try {
+            const res = await fetch('/TPGrupal/api/products', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await res.text();
+            document.getElementById("response").innerText = result;
+        } catch (error) {
+            document.getElementById("response").innerText = "Error: " + error.message;
+        }
+    });
+</script>
+
+</body>
+</html>

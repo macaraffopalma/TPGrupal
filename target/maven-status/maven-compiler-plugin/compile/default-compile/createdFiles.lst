@@ -7,6 +7,7 @@ ar\edu\udecy\web\inventory\dao\CurrentStockDAO$1.class
 ar\edu\udecy\web\inventory\util\JsonDB.class
 ar\edu\udecy\web\inventory\dao\CurrentStockDAO.class
 ar\edu\udecy\web\inventory\model\CurrentStock.class
+ar\edu\udecy\web\inventory\api\ProductApiServlet.class
 ar\edu\udecy\web\inventory\util\LoginValidator.class
 ar\edu\udecy\web\inventory\model\PredictorStock.class
 ar\edu\udecy\web\inventory\action\AddProductAction.class

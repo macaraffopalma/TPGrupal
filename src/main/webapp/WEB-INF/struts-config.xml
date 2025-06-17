@@ -4,13 +4,28 @@
         "http://struts.apache.org/dtds/struts-config_1_3.dtd">
 
 <struts-config>
+
     <!-- Formularios -->
     <form-beans>
         <form-bean name="productForm" type="ar.edu.udecy.web.inventory.action.ProductForm"/>
+        <form-bean name="loginForm" type="ar.edu.udecy.web.inventory.action.LoginForm"/>
     </form-beans>
 
     <!-- Mapeo de acciones -->
     <action-mappings>
+
+        <!-- Login -->
+        <action path="/login"
+                type="ar.edu.udecy.web.inventory.action.LoginAction"
+                name="loginForm"
+                scope="request"
+                input="/index.jsp"
+                validate="false">
+            <forward name="success" path="/dashboard.jsp"/>
+            <forward name="fail" path="/index.jsp"/>
+        </action>
+
+        <!-- Productos -->
         <action path="/productList"
                 type="ar.edu.udecy.web.inventory.action.ProductListAction"
                 scope="request"
@@ -27,6 +42,7 @@
             <forward name="success" path="/productList.do"/>
         </action>
 
+        <!-- Stock actual -->
         <action path="/currentStockList"
                 type="ar.edu.udecy.web.inventory.action.CurrentStockListAction"
                 scope="request"
@@ -34,6 +50,7 @@
             <forward name="success" path="/currentStockList.jsp"/>
         </action>
 
+        <!-- Movimientos de inventario -->
         <action path="/inventoryMovements"
                 type="ar.edu.udecy.web.inventory.action.InventoryMovementListAction"
                 scope="request"
@@ -41,11 +58,14 @@
             <forward name="success" path="/inventoryMovementList.jsp"/>
         </action>
 
+        <!-- Predicción -->
         <action path="/predictorStockList"
                 type="ar.edu.udecy.web.inventory.action.PredictorStockListAction"
                 scope="request"
                 validate="false">
             <forward name="success" path="/predictorStockList.jsp"/>
         </action>
+
     </action-mappings>
+
 </struts-config>
