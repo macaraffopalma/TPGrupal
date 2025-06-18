@@ -2,11 +2,11 @@
 <%@ page import="java.util.*, com.google.gson.Gson, ar.edu.udecy.web.inventory.dao.PredictorStockDAO, ar.edu.udecy.web.inventory.model.PredictorStock" %>
 <%
     PredictorStockDAO dao = new PredictorStockDAO();
-    List<PredictorStock> registros = dao.getAll(); // Asegurate que exista
+    List<PredictorStock> registros = dao.getAllPredictorStockData();
     List<String> fechas = new ArrayList<>();
     List<Integer> unidades = new ArrayList<>();
     for (PredictorStock ps : registros) {
-        fechas.add(ps.getDate());         // Asegurate que existan
+        fechas.add(ps.getDate());
         unidades.add(ps.getUnitsSold());
     }
     Gson gson = new Gson();
