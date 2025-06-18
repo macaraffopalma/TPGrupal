@@ -56,8 +56,8 @@
     </c:if>
 
     <c:if test="${role == 'Admin'}">
-        <a href="predictorStockList.do" target="contenido">Predicción</a>
         <a href="productRestAdd.jsp" target="contenido">Agregar Producto</a>
+        <a href="predictorChart.jsp">Gráfico de Predicción</a>
     </c:if>
 
     <a href="login.jsp">Cerrar Sesión</a>

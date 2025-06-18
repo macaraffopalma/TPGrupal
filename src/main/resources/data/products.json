@@ -22,5 +22,41 @@
     "location": "A1-02",
     "active": true,
     "stock": 5
+  },
+  {
+    "productId": "P003",
+    "productName": "RGB Mechanical Keyboard",
+    "sku": "KM-RGB01",
+    "unitOfMeasure": "Unit",
+    "cost": 80,
+    "salePrice": 120,
+    "category": "Peripherals",
+    "location": "B2-05",
+    "active": true,
+    "stock": 19
+  },
+  {
+    "productId": "P004",
+    "productName": "Logitech Gaming Mouse",
+    "sku": "LOGI-G502",
+    "unitOfMeasure": "Unit",
+    "cost": 50,
+    "salePrice": 75,
+    "category": "Peripherals",
+    "location": "B2-06",
+    "active": true,
+    "stock": 18
+  },
+  {
+    "productId": "P005",
+    "productName": "HDMI Cable 2m",
+    "sku": "HDMI-2M",
+    "unitOfMeasure": "Unit",
+    "cost": 5,
+    "salePrice": 10,
+    "category": "Accessories",
+    "location": "C3-10",
+    "active": true,
+    "stock": 50
   }
 ]

@@ -1,10 +1,42 @@
 [
   {
+    "date": "2024-01-01",
     "productId": "P001",
-    "last7DaysSales": [1, 2, 1, 0, 2, 1, 1]
+    "unitsSold": 5,
+    "avgSalePrice": 1500,
+    "promotionActive": false,
+    "specialEvent": "New Year's Day"
   },
   {
+    "date": "2024-01-01",
     "productId": "P002",
-    "last7DaysSales": [0, 1, 0, 1, 1, 0, 2]
+    "unitsSold": 2,
+    "avgSalePrice": 450,
+    "promotionActive": false,
+    "specialEvent": "New Year's Day"
+  },
+  {
+    "date": "2024-01-08",
+    "productId": "P001",
+    "unitsSold": 7,
+    "avgSalePrice": 1500,
+    "promotionActive": true,
+    "specialEvent": ""
+  },
+  {
+    "date": "2024-01-08",
+    "productId": "P003",
+    "unitsSold": 10,
+    "avgSalePrice": 120,
+    "promotionActive": false,
+    "specialEvent": ""
+  },
+  {
+    "date": "2024-01-15",
+    "productId": "P001",
+    "unitsSold": 4,
+    "avgSalePrice": 1500,
+    "promotionActive": false,
+    "specialEvent": ""
   }
 ]

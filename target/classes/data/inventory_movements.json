@@ -1,14 +1,20 @@
 [
   {
+    "movementId": "M001",
     "productId": "P001",
-    "type": "INGRESO",
-    "quantity": 8,
-    "movementDate": "2025-06-13T00:00:00"
+    "movementType": "IN",
+    "quantity": 10,
+    "movementDate": "2025-06-13T00:00:00",
+    "sourceOrDestination": "Proveedor A",
+    "reference": "OC123"
   },
   {
-    "productId": "P002",
-    "type": "INGRESO",
-    "quantity": 5,
-    "movementDate": "2025-06-13T00:00:00"
+    "movementId": "M002",
+    "productId": "P003",
+    "movementType": "OUT",
+    "quantity": 2,
+    "movementDate": "2025-06-13T00:00:00",
+    "sourceOrDestination": "Cliente B",
+    "reference": "VENTA789"
   }
 ]
